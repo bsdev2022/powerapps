@@ -1,0 +1,38 @@
+
+### Insert
+
+insert into chagebu(날짜, 주행거리, 금액, 내용) values('2022-08-25', 10000, 100000, '엔진오일교환')
+
+select 날짜, 주행거리, 금액, 내용 from chagebu
+
+
+insert into chagebu(날짜, 주행거리, 금액, 내용) values('2022-08-26', 10000, 200000, '타이어교환')
+
+select * from chagebu
+
+
+insert into chagebu values('2022-08-27', 11000, 50000, '세차')
+
+select 날짜, 금액, 내용 from chagebu
+
+
+
+### where
+
+# 엔진오일교환 금액 확인
+select 금액 from chagebu where 날짜='2022-08-25'
+
+
+
+### update & delete
+
+# 타이어교환 30만원으로 수정
+update chagebu set 금액=300000 where 내용 like '타이어교환'
+
+select * from chagebu
+
+
+# 엔진오일교환 내역 삭제
+delete from chagebu where 날짜='2022-08-25' and 내용 like '엔진오일교환'
+
+select * from chagebu
