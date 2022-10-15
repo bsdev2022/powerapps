@@ -1,0 +1,59 @@
+ClearCollect(
+    colNavigation,
+    {
+        Title: "Home",
+        Screen: 'Home',
+        Transition: ScreenTransition.Fade
+    },
+    {
+        Title: "Search",
+        Screen: 'Search',
+        Transition: ScreenTransition.Fade
+    },
+    {
+        Title: "New Asset",
+        Screen: 'New Asset',
+        Transition: ScreenTransition.Fade
+    },
+    {
+        Title: "View Assets",
+        Screen: 'View Assets',
+        Transition: ScreenTransition.Fade
+    }
+);
+
+ClearCollect(
+    colColors,
+    {
+        Name: "Primary",
+        Color: RGBA(102, 153, 0, 1)
+    },
+    {
+        Name: "Secondary",
+        Color: RGBA(153, 0, 102, 1)
+    },
+    {
+        Name: "Screen",
+        Color: RGBA(240, 240, 245, 1)
+    }
+);
+
+ClearCollect(
+    colStyles,
+    {
+        Name: "Header",
+        Color: LookUp(colColors, Name = "Primary").Color
+    },
+    {
+        Name: "Menu",
+        Color: LookUp(colColors, Name = "Secondary").Color
+    },
+    {
+        Name: "ScreenTitle",
+        Color: LookUp(colColors, Name = "Secondary").Color
+    },
+    {
+        Name: "Screen",
+        Color: LookUp(colColors, Name = "Screen").Color
+    }
+);
