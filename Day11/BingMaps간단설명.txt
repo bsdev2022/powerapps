@@ -1,0 +1,61 @@
+### Bing Map 서비스
+
+https://www.bingmapsportal.com
+
+
+
+### 구조
+
+# URL:
+
+https://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial?key={키값}&pp={위도경도};66
+
+
+# GET Query:
+
+- 줌레벨
+&zoomLevel=16 (1-20)
+
+- 맵사이즈
+&mapSize=가로크기,세로크기
+
+
+
+### 예시
+
+- 기본
+https://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial?key={키값}&pp=35.5119151,129.2974771;66
+
+- 사용자레이블
+https://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial?key={키값}&pp=35.5119151,129.2974771;;Hi
+
+- 줌레벨
+https://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial?key={키값}&pp=35.5119151,129.2974771;;Hi&zoomLevel=16
+
+- 맵사이즈
+https://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial?key={키값}&pp=35.5119151,129.2974771;;Hi&zoomLevel=16&mapSize=500,500
+
+- 지도에 레이블표시
+https://dev.virtualearth.net/REST/v1/Imagery/Map/AerialWithLabels?key={키값}&pp=35.5119151,129.2974771;;Hi&zoomLevel=16&mapSize=500,500
+
+- 도로지도
+https://dev.virtualearth.net/REST/v1/Imagery/Map/Road?key={키값}&pp=35.5119151,129.2974771;;Hi&zoomLevel=16&mapSize=500,500
+
+
+
+### 기타
+
+# 레퍼런스
+https://learn.microsoft.com/en-us/bingmaps/rest-services/imagery/get-a-static-map
+
+
+# 울산정보진흥원의 위도, 경도
+35.5119151,129.2974771
+
+# 기본이미지사이즈
+350 X 350
+
+# 적정 zoom 레벨
+16
+
+
